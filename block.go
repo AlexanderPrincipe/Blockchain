@@ -5,7 +5,6 @@ import (
 	"strconv"
 	"time"
 )
-import "fmt"
 
 type Block struct {
 	Timestamp int64
@@ -32,10 +31,3 @@ func NewBlock(data string, prevBlockHash []byte) *Block  {
 	return block
 }
 
-func main()  {
-	b := NewBlock("Probando nuestro bloque", []byte("65df2s4"))
-	fmt.Println("Timestamp", b.Timestamp)
-	fmt.Println("Data:", string(b.Data))
-	fmt.Println("PrevBlockHash:", string(b.PrevBlockHash))
-	fmt.Println("Hash:", string(b.Hash))
-}
